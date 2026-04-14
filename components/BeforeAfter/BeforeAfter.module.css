@@ -1,0 +1,156 @@
+.section {
+  padding: 6rem 0;
+  background-color: #0d0d0d;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.comparisonWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.comparisonSlider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.imageItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  border-right: 2px solid white;
+}
+
+.imageContainer {
+  position: relative;
+  height: 100%;
+}
+
+.label {
+  position: absolute;
+  bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.labelBefore {
+  left: 1.5rem;
+}
+
+.labelAfter {
+  right: 1.5rem;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  appearance: none;
+  z-index: 10;
+  cursor: ew-resize;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 4px;
+  height: 100vh;
+  background: transparent;
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  height: 100%;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+
+.handleLine {
+  height: 100%;
+  width: 2px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.handleCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.handleCircle::before,
+.handleCircle::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.handleCircle::before {
+  border-right: 8px solid #333;
+  margin-right: 4px;
+}
+
+.handleCircle::after {
+  border-left: 8px solid #333;
+  margin-left: 4px;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 4rem 0;
+  }
+}

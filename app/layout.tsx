@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   title: "MOS Detailing | Պրեմիում դեթեյլինգ Երևանում",
-  description: "Սալոնի վերականգնում, ղեկի կաշեպատում, նստատեղերի և առաստաղի վերանորոգում: Որակյալ դեթեյլինգ Երևանում:",
-  keywords: "դեթեյլինգ երևան, սալոնի վերականգնում, նստատեղերի վերանորոգում, ղեկի կաշեպատում",
+  description: "Սրահի վերականգնում, ղեկի կաշեպատում, նստատեղերի և առաստաղի վերանորոգում: Որակյալ դեթեյլինգ Երևանում:",
+  keywords: "դեթեյլինգ երևան, սրահի վերականգնում, նստատեղերի վերանորոգում, ղեկի կաշեպատում",
   openGraph: {
     title: "MOS Detailing | Premium detailing",
     description: "Professional car interior restoration in Yerevan.",

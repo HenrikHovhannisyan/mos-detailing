@@ -21,10 +21,16 @@ export const translations = {
     },
     services: {
       title: "Մեր ծառայությունները",
-      restoration: "Սալոնի վերականգնում",
+      restoration: "Սրահի վերականգնում",
       steering: "Ղեկի կաշեպատում",
       seats: "Նստատեղերի վերանորոգում",
       ceiling: "Առաստաղի վերանորոգում",
+    },
+    beforeAfter: {
+      title: "Առաջ և Հետո",
+      subtitle: "Մեր աշխատանքների արդյունքները",
+      before: "ԱՌԱՋ",
+      after: "ՀԵՏՈ",
     },
     works: {
       title: "Մեր աշխատանքները",
@@ -70,6 +76,12 @@ export const translations = {
       seats: "Ремонт сидений",
       ceiling: "Ремонт потолка",
     },
+    beforeAfter: {
+      title: "До и После",
+      subtitle: "Результаты наших работ",
+      before: "ДО",
+      after: "ПОСЛЕ",
+    },
     works: {
       title: "Наши работы",
       viewMore: "Смотреть все",
@@ -113,6 +125,12 @@ export const translations = {
       steering: "Steering Wheel Leather Replacement",
       seats: "Seat Repair",
       ceiling: "Ceiling Repair",
+    },
+    beforeAfter: {
+      title: "Before & After",
+      subtitle: "Our work results",
+      before: "BEFORE",
+      after: "AFTER",
     },
     works: {
       title: "Our Works",
