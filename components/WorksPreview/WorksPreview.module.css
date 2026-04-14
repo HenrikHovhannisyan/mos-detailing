@@ -1,0 +1,95 @@
+.works {
+  padding: 8rem 0;
+  background-color: #050505;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.item:hover .image {
+  transform: scale(1.15);
+}
+
+.viewBtn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.viewBtn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+.moreWrap {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.moreBtn {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 1rem 3rem;
+  transition: all 0.3s;
+}
+
+.moreBtn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .works {
+    padding: 4rem 0;
+  }
+}
