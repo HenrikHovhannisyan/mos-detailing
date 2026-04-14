@@ -1,6 +1,6 @@
 "use client";
-
 import Image from "next/image";
+import { MapPin, Phone } from "lucide-react";
 import { useLanguage } from "../../LanguageContext";
 import styles from "./Footer.module.css";
 
@@ -17,8 +17,14 @@ export default function Footer() {
             <p className={styles.tagline}>{t.hero.subtitle}</p>
           </div>
           <div className={styles.contacts}>
-            <p>{t.contacts.address}</p>
-            <p>+374 94 730058</p>
+            <div className={styles.contactItem}>
+              <MapPin size={16} className={styles.icon} />
+              <p>{t.contacts.address}</p>
+            </div>
+            <div className={styles.contactItem}>
+              <Phone size={16} className={styles.icon} />
+              <p>+374 94 730058</p>
+            </div>
           </div>
         </div>
         <div className={styles.bottom}>

@@ -1,17 +1,15 @@
 "use client";
-
+import { Phone, MapPin, Camera, MessageCircle, Send, Navigation } from "lucide-react";
 import { useLanguage } from "../../LanguageContext";
 import styles from "./Contacts.module.css";
 
 export default function Contacts() {
   const { t } = useLanguage();
 
-  const address = "улица Смбата Зоравара, 49, Ереван";
   const phone = "+374 94 730058"; 
   const phoneClean = phone.replace(/\s/g, "");
 
   const openNavigator = () => {
-    // Open direct web link to Yandex Maps with route destination
     window.open(`https://yandex.ru/maps/?rtext=~40.153783,44.502863`, "_blank");
   };
 
@@ -22,19 +20,39 @@ export default function Contacts() {
         <div className={styles.grid}>
           <div className={styles.info}>
             <div className={styles.item}>
-              <p className={styles.label}>{t.contacts.phone}</p>
-              <a href={`tel:${phoneClean}`} className={styles.value}>{phone}</a>
+              <div className={styles.iconBox}>
+                <Phone size={24} />
+              </div>
+              <div className={styles.itemContent}>
+                <p className={styles.label}>{t.contacts.phone}</p>
+                <a href={`tel:${phoneClean}`} className={styles.value}>{phone}</a>
+              </div>
             </div>
             <div className={styles.item}>
-              <p className={styles.label}>Адрес</p>
-              <p className={styles.value}>{t.contacts.address}</p>
+              <div className={styles.iconBox}>
+                <MapPin size={24} />
+              </div>
+              <div className={styles.itemContent}>
+                <p className={styles.label}>{t.contacts.addressLabel}</p>
+                <p className={styles.value}>{t.contacts.address}</p>
+              </div>
             </div>
             <div className={styles.socials}>
-              <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://wa.me/37494730058" target="_blank" rel="noopener">WhatsApp</a>
-              <a href="https://t.me/mosdetailing" target="_blank" rel="noopener">Telegram</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" className={styles.socialLink}>
+                <Camera size={20} />
+                <span>Instagram</span>
+              </a>
+              <a href="https://wa.me/37494730058" target="_blank" rel="noopener" className={styles.socialLink}>
+                <MessageCircle size={20} />
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://t.me/mosdetailing" target="_blank" rel="noopener" className={styles.socialLink}>
+                <Send size={20} />
+                <span>Telegram</span>
+              </a>
             </div>
             <button className={styles.navBtn} onClick={openNavigator}>
+              <Navigation size={20} />
               {t.contacts.getRoute}
             </button>
           </div>

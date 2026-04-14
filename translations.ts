@@ -36,6 +36,7 @@ export const translations = {
       address: "ք. Երևան, Սմբատ Զորավարի փող., 49 տուն",
       getRoute: "Ինչպես հասնել",
       phone: "Հեռախոս",
+      addressLabel: "Հասցե",
     },
     footer: {
       rights: "Բոլոր իրավունքները պաշտպանված են",
@@ -79,6 +80,7 @@ export const translations = {
       address: "улица Смбата Зоравара, 49, Ереван",
       getRoute: "Как добраться",
       phone: "Телефон",
+      addressLabel: "Адрес",
     },
     footer: {
       rights: "Все права защищены",
@@ -122,6 +124,7 @@ export const translations = {
       address: "49 Smbat Zoravar St, Yerevan",
       getRoute: "How to get there",
       phone: "Phone",
+      addressLabel: "Address",
     },
     footer: {
       rights: "All rights reserved",
