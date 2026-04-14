@@ -18,6 +18,8 @@
 .logo {
   object-fit: contain;
   margin-bottom: 1rem;
+  width: auto;
+  max-width: 100%;
 }
 
 .tagline {

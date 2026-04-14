@@ -31,18 +31,18 @@ export default function Header() {
           <a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
           <Link href="/works" onClick={() => setMenuOpen(false)}>{t.nav.works}</Link>
           <a href="#contacts" onClick={() => setMenuOpen(false)}>{t.nav.contacts}</a>
-          
+
           <div className={styles.langSwitch}>
-            <button 
-              className={locale === "am" ? styles.activeLang : ""} 
+            <button
+              className={locale === "am" ? styles.activeLang : ""}
               onClick={() => setLocale("am")}
             >AM</button>
-            <button 
-              className={locale === "ru" ? styles.activeLang : ""} 
+            <button
+              className={locale === "ru" ? styles.activeLang : ""}
               onClick={() => setLocale("ru")}
             >RU</button>
-            <button 
-              className={locale === "en" ? styles.activeLang : ""} 
+            <button
+              className={locale === "en" ? styles.activeLang : ""}
               onClick={() => setLocale("en")}
             >EN</button>
           </div>

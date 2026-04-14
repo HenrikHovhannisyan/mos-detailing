@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Image src="/logo.png" alt="MOS Detailing" width={120} height={40} className={styles.logo} />
+            <Image src="/logo.png" alt="MOS Detailing" width={220} height={75} className={styles.logo} />
             <p className={styles.tagline}>{t.hero.subtitle}</p>
           </div>
           <div className={styles.contacts}>
