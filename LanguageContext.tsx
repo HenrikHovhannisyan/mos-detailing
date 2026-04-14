@@ -19,12 +19,8 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     if (savedLocale && (savedLocale === "am" || savedLocale === "ru" || savedLocale === "en")) {
       setLocaleState(savedLocale);
     } else {
-      // Try to detect browser language
-      const browserLang = navigator.language.split("-")[0];
-      if (browserLang === "hy") setLocaleState("am");
-      else if (browserLang === "am") setLocaleState("am");
-      else if (browserLang === "ru") setLocaleState("ru");
-      else setLocaleState("en");
+      // Default to am if nothing is saved in localStorage
+      setLocaleState("am");
     }
   }, []);
 

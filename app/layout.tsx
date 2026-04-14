@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="am">
       <body className={inter.className}>
         <LanguageProvider>
           {children}
