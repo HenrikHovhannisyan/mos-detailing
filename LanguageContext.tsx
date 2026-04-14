@@ -35,6 +35,15 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     document.title = t.meta.title;
   }, [locale, t]);
 
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((reg) => console.log("SW registered"))
+        .catch((err) => console.log("SW failed", err));
+    }
+  }, []);
+
   return (
     <LanguageContext.Provider value={{ locale, setLocale, t }}>
       {children}

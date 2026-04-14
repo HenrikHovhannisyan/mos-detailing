@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     description: "Professional car interior restoration in Yerevan.",
     images: ["/images/hero_bg.png"],
   },
+  themeColor: "#0a0a0a",
+  appleWebApp: {
+    title: "MOS Detailing",
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({
